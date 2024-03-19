@@ -38,11 +38,17 @@ for (let i = 0; i < listaDeNumeros.length; i++) {
 console.log("A soma dos números é:", soma);
 
 ```
+
+``R = Para resolver isso é necessário entender o resiltadoBooleano. O resultado que vai sair é se X for menor que Y e Z > X retorna true ou se X - Y for maior que Z também retorna true. Com números, se 17 for menor que 5 e 8 for maior que 17 retorna true ou se 17 - 5 for maior que 8 retorna true.
+Dessa forma o console.log vai exibir que resultadoBooleano é true, isso acontece só por causa da segunda condição que atende o requisito de ser verdadeiro ou falso.
+A segunda parte do código vai pegar uma lista e fazer a soma dela na variável soma, que nesse caso é uma lista de 1 a 5 e dessa forma vai somar 15 na variável soma.
+Com isso a alternativa correta é a B.``
+
 Qual das seguintes alternativas melhor descreve o que o código faz?
 
 A) O código avalia a expressão booleana, imprime o resultado `false`, calcula a soma dos números de 1 a 5 e imprime o resultado no console.
 
-B) O código avalia a expressão booleana, imprime o resultado `true`, calcula a soma dos números de 1 a 5 e imprime o resultado no console.
+``X) O código avalia a expressão booleana, imprime o resultado `true`, calcula a soma dos números de 1 a 5 e imprime o resultado no console.``
 
 C) O código avalia a expressão booleana, imprime o resultado `true` e verifica se o número 5 está presente na lista de números.
 
@@ -102,11 +108,13 @@ function calculaOrcamento2(){
 }
 ```
 
+``R = São duas funções com o propósito de calcular o orçamento, porém o que diferencia elas é o uso do laço de repetição, a primeira usa o do while, onde realiza primeiro o comando e depois verifica a condição, a segunda usa apenas o while onde verifica a condição primeiro e depois executa o comando. Por causa disso, as duas funções verificam o salario - totalGasto. A primeira função imprime -1050 pois primeiro lê o comando a condição. A segunda ela já lê a condição e pela condição a variável totalGasto não adiciona mais valor, por causa disso só imprime o -100.``
+
 Escolha a opção que responde corretamente qual seria a saída após a execução de cada função:
 
 A) As funções calcularOrcamento() e calcularOrcamento2() teriam a mesma saída: 'Seu saldo é negativo de -1050.'
 
-B) A saída de calcularOrcamento() seria: 'Seu saldo é negativo de -1050.' e a de calcularOrcamento2() seria: 'Seu saldo é negativo de -100.'
+``X) A saída de calcularOrcamento() seria: 'Seu saldo é negativo de -1050.' e a de calcularOrcamento2() seria: 'Seu saldo é negativo de -100.'``
 
 C) A saída de calcularOrcamento() seria: 'Seu saldo é negativo de -100.' e a de calcularOrcamento2() seria: 'Seu saldo é negativo de -1050.'
 
@@ -130,14 +138,16 @@ if (numero % 2 === 0) {
 
  Qual das seguintes alternativas é a descrição mais precisa do que o código faz?
 
+``R = Esse código tem uma constante numero igual a 10. E tem condições, onde verifica se o número vai ser par, divisível por 3 ou ímpar.
+Como a constante é igual a 10 e 10 é um numéro par, o resultado que é printado no console é "O número é par!"``
 
 A) O código verifica se o número é divisível por 3 e, se for, exibe a mensagem "O número é divisível por 3!".
 
 B) O código verifica se o número é par ou ímpar. Se for par, exibe a mensagem "O número é par!". Se for ímpar, exibe a mensagem "O número é ímpar!".
 
-C) O código verifica se o número é par e se é divisível por 3. Se for par, exibe a mensagem "O número é par!". Se for divisível por 3, exibe a mensagem "O número é divisível por 3!".
+C) O código verifica se o número é par, ímpar ou divisível por 3. Se for par, exibe a mensagem "O número é par!". Se for divisível por 3, exibe a mensagem "O número é divisível por 3!". Se for ímpar, exibe a mensagem "O número é ímpar e não é divisível por 3!".
 
-D) O código verifica se o número é par, ímpar ou divisível por 3. Se for par, exibe a mensagem "O número é par!". Se for ímpar, exibe a mensagem "O número é ímpar!". Se for divisível por 3, exibe a mensagem "O número é divisível por 3!".
+``X) O código verifica se o número é par, se é divisível por 3 ou se é ímpar. Se for par, exibe a mensagem "O número é par!". Se for divisível por 3 (e não for par), exibe a mensagem "O número é divisível por 3!". Se for ímpar (e não for divisível por 3), exibe a mensagem "O número é ímpar e não é divisível por 3!".``
 
 
 ______
@@ -167,6 +177,13 @@ for (var i = 0; i < valorCompras.length; i++) {
 
 Escolha a opção que responde corretamente:
 
+``R = Esse código faz 5 verificações, a cada verificação é adicionado mais um valor na variável valorCompra. A análise de cada uma das verificações, ficou assim:
+primeira vez: console.log = 1, dá valorCompra = 200 e saldo restante 800
+segunda vez: console.log = 2, dá valorCompra = 1000 e saldo restante 0
+terceira vez: console.log = 3, dá valorCompra = 1300 e saldo restante 200
+quarta vez: console.log = 4, dá valorCompra = 1700 e saldo insuficiente
+quinta vez: console.log = 5, dá valorCompra = 2300 e saldo insuficiente``
+
 A)
 Compra 1 aprovada. Saldo restante: 800
 
@@ -184,9 +201,9 @@ Compra 1 aprovada. Saldo restante: 800
 
 Compra 2 aprovada com limite de crédito. Saldo restante: 700
 
-Compra 3 aprovada. Saldo restante: 400
+Compra 3 aprovada. Saldo restante: 200
 
-Compra 4 aprovada com limite de crédito. Saldo restante: 0
+Compra 4 negada. Saldo insuficiente e limite de crédito excedido.
 
 Compra 5 negada. Saldo insuficiente e limite de crédito excedido.
 
@@ -201,17 +218,17 @@ Compra 3 aprovada. Saldo restante: 400
 Compra 4 negada. Saldo insuficiente e limite de crédito excedido.
 
 
-D)
+``X)``
 
-Compra 1 aprovada. Saldo restante: 800
+``Compra 1 aprovada. Saldo restante: 800``
 
-Compra 2 aprovada com limite de crédito. Saldo restante: 700
+``Compra 2 aprovada. Saldo restante: 0``
 
-Compra 3 aprovada. Saldo restante: 400
+``Compra 3 aprovada com limite de crédito. Saldo restante: 200``
 
-Compra 4 aprovada. Saldo restante: 0
+``Compra 4 negada. Saldo insuficiente e limite de crédito excedido.``
 
-Compra 5 negada. Saldo insuficiente e limite de crédito excedido.
+``Compra 5 negada. Saldo insuficiente e limite de crédito excedido.``
 
 ______
 
@@ -219,9 +236,14 @@ ______
 
 Escolha a opção que responde corretamente:
 
+``R = O ciclo de vida do funcionamento de um jogo phaser segue essas etapas:``
+`` - Preload(): Carrega os recursos necessários do jogo dentro do phaser.``
+ ``- Create(): Cria os objetos, configurações e etc. É onde de fato começa toda a inicialização do jogo.``
+ ``- Update(): Atualizações contínuas do jogo, onde fica em loop.``
+
 A) Setup -> Update -> Draw
 
-B) Preload -> Create -> Update
+``X) Preload -> Create -> Update``
 
 C) Load -> Initialize -> Render
 
@@ -232,9 +254,11 @@ ______
 
 Escolha a opção que responde corretamente:
 
+``R = Na configuração é onde setamos que nosso jogo terá física, dessa forma, ativando as colisões, gravidade e interações no jogo``
+
 A) Renderizar gráficos 3D para jogos em HTML5.
 
-B) Simular interações físicas realistas, como colisões e movimentos, em jogos 2D.
+``B) Simular interações físicas realistas, como colisões e movimentos, em jogos 2D.``
 
 C) Criar efeitos de áudio para melhorar a experiência do usuário em jogos.
 
