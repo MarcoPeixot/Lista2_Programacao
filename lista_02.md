@@ -270,6 +270,21 @@ ______
 
 **7)** Implemente o pseudocódigo para o algoritmo representado no fluxograma da imagem.
 ![Uma imagem](assets/image.png)
+
+```
+// Inicialização da variável idade
+variável idade = inserir("Insira sua idade")
+
+// Verificação de idade para votar
+// Faz uma verificação se a idade está de acordo para votar 
+// não votar e dizer se o voto é obrigatório ou facultativo.
+se idade for menor que 16:
+    imprima("Não pode votar!")
+senão se idade for menor que 18:
+    imprima("Voto facultativo")
+senão:
+    imprima("Voto obrigatório")
+```
 ______
 
 **8)** Considere a implementação da classe base FormaGeometrica em um sistema de modelagem de formas geométricas. Sua tarefa é implementar, utilizando pseudocódigo, as classes derivadas Retangulo e Circulo, que herdam da classe FormaGeometrica, adicionando atributos específicos e métodos para calcular a área de um retângulo e de um círculo, respectivamente.
@@ -287,9 +302,77 @@ Classe FormaGeometrica:
 
 ```
 
+Resposta:
+
+```
+Classe FormaGeometrica:
+    Atributos:
+        - cor
+
+    Método Construtor(cor):
+        esta cor = cor
+
+    Método CalcularArea():
+        # Implementação genérica para cálculo de área, a ser sobrescrita pelas subclasses.
+
+Classe Retangulo herda de FormaGeometrica:
+    Atributos:
+        - cor
+
+    Método Construtor(cor, base, altura):
+    Chama o construtor da classe FormaGeometrica passando a cor como parâmetro.
+    esta base = base
+    esta altura = altura
+
+    Método CalcularArea():
+        Retorna area = base * altura
+
+
+Classe Circulo herda de FormaGeometrica:
+    Atributos:
+        - cor
+
+    Método Construtor(cor, raio):
+    Chama o construtor da classe FormaGeometrica passando a cor como parâmetro.
+    esta raio = raio
+
+    Método CalcularArea():
+        Retorna area = π * raio^2.
+    
+
+```
 ______
 
 **9)** Você foi contratado(a) como estagiário(a) da Tesla e está participando do desenvolvimento de um programa para simular o desempenho de um carro elétrico em uma corrida. Seu objetivo é determinar em quantos minutos o carro levará para completar uma determinada distância, levando em consideração uma velocidade inicial e uma taxa de aceleração constante. No entanto, você deseja garantir que o carro não exceda uma velocidade máxima nem que a corrida demore mais do que um tempo máximo. Implemente a lógica dessa simulação em pseudocódigo.
+
+```
+
+
+velocidade_atual = velocidade_inicial
+distancia_percorrida = 0
+tempo_passado = 0
+
+Enquanto (distancia_percorrida < distancia_corrida e tempo_passado <= tempo_maximo e velocidade_atual <= velocidade_maxima) faça
+    tempo_aceleracao = (velocidade_maxima - velocidade_atual) / taxa_aceleracao
+    Se (tempo_aceleracao <= tempo_maximo - tempo_passado) então
+        tempo_passado = tempo_passado + tempo_aceleracao
+        velocidade_atual = velocidade_maxima
+    Senão
+        tempo_passado = tempo_maximo
+        velocidade_atual = velocidade_atual + taxa_aceleracao * (tempo_maximo - tempo_passado)
+    Fim Se 
+    distancia_percorrida = distancia_percorrida + velocidade_atual * (tempo_passado - tempo_aceleracao / 2)
+Fim Enquanto
+
+Se (distancia_percorrida >= distancia_corrida) então
+    mensagem = "O carro completou a corrida em " + tempo_passado + " minutos."
+Senão
+    mensagem = "O carro não conseguiu completar a corrida dentro do tempo máximo."
+
+imprima mensagem
+
+
+```
 
 
 
@@ -321,4 +404,37 @@ matrizB <- [[9, 8, 7], [6, 5, 4], [3, 2, 1]]
 matrizSoma <- SomaDeMatrizes(matrizA, matrizB)
 Escrever("Soma das matrizes:")
 ImprimirMatriz(matrizSoma)
+```
+
+Resposta:
+
+```
+Função MultiplicacaoDeMatrizes(matrizA, matrizB):
+    # Verifica se o número de colunas da matrizA é igual ao número de linhas da matrizB
+    Se tamanho(matrizA[0]) ≠ tamanho(matrizB) então:
+        Retornar "As matrizes não podem ser multiplicadas. Elas têm dimensões diferentes."
+    Senão:
+        linhasA <- tamanho(matrizA)
+        colunasA <- tamanho(matrizA[0])
+        colunasB <- tamanho(matrizB[0])
+        matrizResultado <- novaMatriz(linhasA, colunasB)
+
+        # Loop para calcular cada elemento da matriz resultado
+        Para i de 0 até linhasA-1 faça:
+            Para j de 0 até colunasB-1 faça:
+                soma <- 0
+                Para k de 0 até colunasA-1 faça:
+                    soma <- soma + (matrizA[i][k] * matrizB[k][j])
+                matrizResultado[i][j] <- soma
+
+        Retornar matrizResultado
+
+# Exemplo de uso da função
+matrizA <- [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+matrizB <- [[9, 8, 7], [6, 5, 4], [3, 2, 1]]
+
+matrizProduto <- MultiplicacaoDeMatrizes(matrizA, matrizB)
+Escrever("Produto das matrizes:")
+ImprimirMatriz(matrizProduto)
+
 ```
